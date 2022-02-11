@@ -70,6 +70,7 @@ describe('Login application', () => {
     it('Should click on the user and go payment page', async () => {
      
       // await $('[data-test="users-list"]').waitForEnabled();
+      await $('[data-test="user-list-item-24VniajY1y"]').waitForClickable();
       await $('[data-test="user-list-item-24VniajY1y"]').click();
       await browser.saveScreenshot("./paymentpage.png"); 
 
@@ -79,13 +80,13 @@ describe('Login application', () => {
       
         
         
-        await $('[aria-describedby="transaction-create-amount-input-helper-text"]').setValue('300');
+        await $('#amount').setValue('300');
         await $('[id="transaction-create-description-input"]').click();
-        await $('[aria-describedby="transaction-create-description-input-helper-text"]').setValue('Dungeon master');
-        await $('[data-test="transaction-create-submit-payment"]').waitForEnabled();
-        await $('[data-test="transaction-create-submit-payment"]').click(id="transaction-create-description-input");
+        await $('[id="transaction-create-description-input"]').setValue('Dungeon master');
+        await $('[data-test="transaction-create-submit-payment"]').waitForClickable();
+        await $('[data-test="transaction-create-submit-payment"]').click();
 
-        await browser.saveScreenshot(".result/.png");
+        await browser.saveScreenshot("./result.png");
   
        });
         
