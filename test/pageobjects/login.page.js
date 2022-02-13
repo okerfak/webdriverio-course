@@ -33,7 +33,7 @@ class LoginPage extends Page {
      * overwrite specific options to adapt it to page object
      */
    async open() {
-        return super.open('signin');
+       return super.open('signin');
     }
 
     async submit(){

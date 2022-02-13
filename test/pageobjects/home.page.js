@@ -1,10 +1,10 @@
-const Page = require ('./page');
+const Page = require('./page');
  
 class HomePage extends Page{
  
     //page locators:
  
-        get dashboardHeader() { return $('div.head &gt; h1') }
+        get dashboardHeader() { return $('div.head &gt; h1'); }
  
     //page actions:  
        //to verify user is in dashboard page
